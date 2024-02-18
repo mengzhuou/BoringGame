@@ -14,6 +14,7 @@
 		459F17D42B8081F30058763E /* BoringGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F17D32B8081F30058763E /* BoringGameTests.swift */; };
 		459F17DE2B8081F30058763E /* BoringGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F17DD2B8081F30058763E /* BoringGameUITests.swift */; };
 		459F17E02B8081F30058763E /* BoringGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F17DF2B8081F30058763E /* BoringGameUITestsLaunchTests.swift */; };
+		459F17ED2B82B4D00058763E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F17EC2B82B4D00058763E /* GameScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		459F17D92B8081F30058763E /* BoringGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoringGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		459F17DD2B8081F30058763E /* BoringGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringGameUITests.swift; sourceTree = "<group>"; };
 		459F17DF2B8081F30058763E /* BoringGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		459F17EC2B82B4D00058763E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				459F17C22B8081F20058763E /* BoringGameApp.swift */,
 				459F17C42B8081F20058763E /* ContentView.swift */,
+				459F17EC2B82B4D00058763E /* GameScene.swift */,
 				459F17C62B8081F30058763E /* Assets.xcassets */,
 				459F17C82B8081F30058763E /* Preview Content */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459F17ED2B82B4D00058763E /* GameScene.swift in Sources */,
 				459F17C52B8081F20058763E /* ContentView.swift in Sources */,
 				459F17C32B8081F20058763E /* BoringGameApp.swift in Sources */,
 			);
