@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		459F17C32B8081F20058763E /* BoringGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F17C22B8081F20058763E /* BoringGameApp.swift */; };
+		459F17C52B8081F20058763E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F17C42B8081F20058763E /* ContentView.swift */; };
+		459F17C72B8081F30058763E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 459F17C62B8081F30058763E /* Assets.xcassets */; };
+		459F17CA2B8081F30058763E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 459F17C92B8081F30058763E /* Preview Assets.xcassets */; };
+		459F17D42B8081F30058763E /* BoringGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F17D32B8081F30058763E /* BoringGameTests.swift */; };
+		459F17DE2B8081F30058763E /* BoringGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F17DD2B8081F30058763E /* BoringGameUITests.swift */; };
+		459F17E02B8081F30058763E /* BoringGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F17DF2B8081F30058763E /* BoringGameUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		459F17D02B8081F30058763E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 459F17B72B8081F20058763E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 459F17BE2B8081F20058763E;
+			remoteInfo = BoringGame;
+		};
+		459F17DA2B8081F30058763E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 459F17B72B8081F20058763E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 459F17BE2B8081F20058763E;
+			remoteInfo = BoringGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		459F17BF2B8081F20058763E /* BoringGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoringGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		459F17C22B8081F20058763E /* BoringGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringGameApp.swift; sourceTree = "<group>"; };
+		459F17C42B8081F20058763E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		459F17C62B8081F30058763E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		459F17C92B8081F30058763E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		459F17CF2B8081F30058763E /* BoringGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoringGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		459F17D32B8081F30058763E /* BoringGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringGameTests.swift; sourceTree = "<group>"; };
+		459F17D92B8081F30058763E /* BoringGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoringGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		459F17DD2B8081F30058763E /* BoringGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringGameUITests.swift; sourceTree = "<group>"; };
+		459F17DF2B8081F30058763E /* BoringGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		459F17BC2B8081F20058763E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		459F17CC2B8081F30058763E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		459F17D62B8081F30058763E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		459F17B62B8081F20058763E = {
+			isa = PBXGroup;
+			children = (
+				459F17C12B8081F20058763E /* BoringGame */,
+				459F17D22B8081F30058763E /* BoringGameTests */,
+				459F17DC2B8081F30058763E /* BoringGameUITests */,
+				459F17C02B8081F20058763E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		459F17C02B8081F20058763E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				459F17BF2B8081F20058763E /* BoringGame.app */,
+				459F17CF2B8081F30058763E /* BoringGameTests.xctest */,
+				459F17D92B8081F30058763E /* BoringGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		459F17C12B8081F20058763E /* BoringGame */ = {
+			isa = PBXGroup;
+			children = (
+				459F17C22B8081F20058763E /* BoringGameApp.swift */,
+				459F17C42B8081F20058763E /* ContentView.swift */,
+				459F17C62B8081F30058763E /* Assets.xcassets */,
+				459F17C82B8081F30058763E /* Preview Content */,
+			);
+			path = BoringGame;
+			sourceTree = "<group>";
+		};
+		459F17C82B8081F30058763E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				459F17C92B8081F30058763E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		459F17D22B8081F30058763E /* BoringGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				459F17D32B8081F30058763E /* BoringGameTests.swift */,
+			);
+			path = BoringGameTests;
+			sourceTree = "<group>";
+		};
+		459F17DC2B8081F30058763E /* BoringGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				459F17DD2B8081F30058763E /* BoringGameUITests.swift */,
+				459F17DF2B8081F30058763E /* BoringGameUITestsLaunchTests.swift */,
+			);
+			path = BoringGameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		459F17BE2B8081F20058763E /* BoringGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 459F17E32B8081F30058763E /* Build configuration list for PBXNativeTarget "BoringGame" */;
+			buildPhases = (
+				459F17BB2B8081F20058763E /* Sources */,
+				459F17BC2B8081F20058763E /* Frameworks */,
+				459F17BD2B8081F20058763E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BoringGame;
+			productName = BoringGame;
+			productReference = 459F17BF2B8081F20058763E /* BoringGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		459F17CE2B8081F30058763E /* BoringGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 459F17E62B8081F30058763E /* Build configuration list for PBXNativeTarget "BoringGameTests" */;
+			buildPhases = (
+				459F17CB2B8081F30058763E /* Sources */,
+				459F17CC2B8081F30058763E /* Frameworks */,
+				459F17CD2B8081F30058763E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				459F17D12B8081F30058763E /* PBXTargetDependency */,
+			);
+			name = BoringGameTests;
+			productName = BoringGameTests;
+			productReference = 459F17CF2B8081F30058763E /* BoringGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		459F17D82B8081F30058763E /* BoringGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 459F17E92B8081F30058763E /* Build configuration list for PBXNativeTarget "BoringGameUITests" */;
+			buildPhases = (
+				459F17D52B8081F30058763E /* Sources */,
+				459F17D62B8081F30058763E /* Frameworks */,
+				459F17D72B8081F30058763E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				459F17DB2B8081F30058763E /* PBXTargetDependency */,
+			);
+			name = BoringGameUITests;
+			productName = BoringGameUITests;
+			productReference = 459F17D92B8081F30058763E /* BoringGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		459F17B72B8081F20058763E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					459F17BE2B8081F20058763E = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					459F17CE2B8081F30058763E = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 459F17BE2B8081F20058763E;
+					};
+					459F17D82B8081F30058763E = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 459F17BE2B8081F20058763E;
+					};
+				};
+			};
+			buildConfigurationList = 459F17BA2B8081F20058763E /* Build configuration list for PBXProject "BoringGame" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 459F17B62B8081F20058763E;
+			productRefGroup = 459F17C02B8081F20058763E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				459F17BE2B8081F20058763E /* BoringGame */,
+				459F17CE2B8081F30058763E /* BoringGameTests */,
+				459F17D82B8081F30058763E /* BoringGameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		459F17BD2B8081F20058763E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				459F17CA2B8081F30058763E /* Preview Assets.xcassets in Resources */,
+				459F17C72B8081F30058763E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		459F17CD2B8081F30058763E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		459F17D72B8081F30058763E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		459F17BB2B8081F20058763E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				459F17C52B8081F20058763E /* ContentView.swift in Sources */,
+				459F17C32B8081F20058763E /* BoringGameApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		459F17CB2B8081F30058763E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				459F17D42B8081F30058763E /* BoringGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		459F17D52B8081F30058763E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				459F17DE2B8081F30058763E /* BoringGameUITests.swift in Sources */,
+				459F17E02B8081F30058763E /* BoringGameUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		459F17D12B8081F30058763E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 459F17BE2B8081F20058763E /* BoringGame */;
+			targetProxy = 459F17D02B8081F30058763E /* PBXContainerItemProxy */;
+		};
+		459F17DB2B8081F30058763E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 459F17BE2B8081F20058763E /* BoringGame */;
+			targetProxy = 459F17DA2B8081F30058763E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		459F17E12B8081F30058763E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		459F17E22B8081F30058763E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		459F17E42B8081F30058763E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BoringGame/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mengzhuou.BoringGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		459F17E52B8081F30058763E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BoringGame/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mengzhuou.BoringGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		459F17E72B8081F30058763E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mengzhuou.BoringGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoringGame.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BoringGame";
+			};
+			name = Debug;
+		};
+		459F17E82B8081F30058763E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mengzhuou.BoringGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoringGame.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BoringGame";
+			};
+			name = Release;
+		};
+		459F17EA2B8081F30058763E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mengzhuou.BoringGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BoringGame;
+			};
+			name = Debug;
+		};
+		459F17EB2B8081F30058763E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mengzhuou.BoringGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BoringGame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		459F17BA2B8081F20058763E /* Build configuration list for PBXProject "BoringGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				459F17E12B8081F30058763E /* Debug */,
+				459F17E22B8081F30058763E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		459F17E32B8081F30058763E /* Build configuration list for PBXNativeTarget "BoringGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				459F17E42B8081F30058763E /* Debug */,
+				459F17E52B8081F30058763E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		459F17E62B8081F30058763E /* Build configuration list for PBXNativeTarget "BoringGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				459F17E72B8081F30058763E /* Debug */,
+				459F17E82B8081F30058763E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		459F17E92B8081F30058763E /* Build configuration list for PBXNativeTarget "BoringGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				459F17EA2B8081F30058763E /* Debug */,
+				459F17EB2B8081F30058763E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 459F17B72B8081F20058763E /* Project object */;
+}
