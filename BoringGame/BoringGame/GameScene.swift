@@ -7,8 +7,9 @@
 
 import SpriteKit
 
-class GameScene: SKScene{
+class GameScene: SKScene, SKPhysicsContactDelegate{
     let brick = SKSpriteNode()
+    let ground = SKSpriteNode()
     var clickCount = 0
     var bounds: CGRect = CGRect.zero
     var countLabel = SKLabelNode()
@@ -23,8 +24,15 @@ class GameScene: SKScene{
         
         self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -4.0)
         brick.physicsBody = SKPhysicsBody(rectangleOf: brick.size)
-        brick.physicsBody?.isDynamic = true
-        brick.physicsBody?.affectedByGravity = true
+        brick.physicsBody!.isDynamic = true
+        brick.physicsBody!.affectedByGravity = true
+        
+        
+        //contact with ground
+        physicsWorld.contactDelegate = self
+        brick.physicsBody?.categoryBitMask = 2
+        brick.physicsBody?.contactTestBitMask = 2
+        
         
         //body rectangle
         let bodyRect = CGRect(origin: CGPoint(x: -brickSize.width/2, y: -brickSize.height/2), size: brickSize)
@@ -73,7 +81,8 @@ class GameScene: SKScene{
     }
     
     func createGround(){
-        let ground = SKSpriteNode()
+        ground.physicsBody?.categoryBitMask = 1
+        ground.physicsBody?.contactTestBitMask = 1
         ground.size = CGSize(width: 500, height: 5)
         ground.color = .clear
         ground.position = CGPoint(x: 250, y: 20)
@@ -95,9 +104,9 @@ class GameScene: SKScene{
                 startTouch = location
                 clickCount += 1
                 countLabel.text = "Count: \(clickCount)"
+                
                 let impulseX = startTouch.x
                 let impulseY = startTouch.y
-                
                 let randomDX = CGFloat(Int.random(in: -500...0))
                 let randomDY = CGFloat(Int.random(in: 15...50))
                 
@@ -113,6 +122,13 @@ class GameScene: SKScene{
             endTouch = touch.location(in: self)
         }
         
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        if (contact.bodyA.node == brick && contact.bodyB.node == ground) || (contact.bodyB.node == brick && contact.bodyA.node == ground) {
+            clickCount = 0
+            countLabel.text = "Count: \(clickCount)"
+        }
     }
 }
 
