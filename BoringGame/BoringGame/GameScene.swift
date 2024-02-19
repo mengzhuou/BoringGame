@@ -11,20 +11,39 @@ class GameScene: SKScene{
     let brick = SKSpriteNode()
     
     override func didMove(to view: SKView) {
+        brick.size = CGSize(width: 100, height: 50)
         
-        brick.size = CGSize(width: 80, height: 50)
-        brick.position = CGPoint(x: 100, y: 100)
-        brick.color = .black
+        let brickSize = CGSize(width: 100, height: 50)
+        brick.position = CGPoint(x: 200, y: 100)
         
         
+        //body rectangle
+        let bodyRect = CGRect(origin: CGPoint(x: -brickSize.width/2, y: -brickSize.height/2), size: brickSize)
+        
+        let bodyShape = SKShapeNode(rect: bodyRect, cornerRadius: 5)
+        bodyShape.fillColor = .clear
+        
+        
+        //border of rectangle
+        let borderRect = CGRect(origin: CGPoint(x: -brickSize.width/2, y: -brickSize.height/2), size: brickSize)
+        
+        let borderShape = SKShapeNode(rect: borderRect, cornerRadius: 5)
+        borderShape.strokeColor = .black
+        borderShape.lineWidth = 2
+        
+        brick.addChild(bodyShape)
+        brick.addChild(borderShape)
+        
+        //text of brick
         let brickText = SKLabelNode(text: "Boring")
-        brickText.color = .black
-        brickText.fontSize = 18
+        brickText.fontColor = .black
+        brickText.fontSize = 23
         brickText.fontName = "Arial-BoldMT"
-        brickText.position = CGPoint(x: 0, y: 0)
+        brickText.position = CGPoint(x: 0, y: -7)
+        
         brick.addChild(brickText)
         
-        self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -1.0)
+        self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -4.0)
         
         addChild(brick)
         createGround()
@@ -59,7 +78,6 @@ class GameScene: SKScene{
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
-            
             brick.physicsBody = SKPhysicsBody(rectangleOf: brick.size)
             brick.physicsBody?.isDynamic = true
             brick.physicsBody?.affectedByGravity = true
