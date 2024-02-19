@@ -10,6 +10,7 @@ import SpriteKit
 class GameScene: SKScene{
     let brick = SKSpriteNode()
     var clickCount = 0
+    var bounds: CGRect = CGRect.zero
     var countLabel = SKLabelNode()
     
     override func didMove(to view: SKView) {
@@ -54,6 +55,12 @@ class GameScene: SKScene{
         countLabel.position = CGPoint(x: size.width - 50, y: size.height - 80)
         addChild(countLabel)
         
+        
+        //screen boundaries
+        bounds = CGRect(x: frame.minX, y: frame.minY, width: frame.width, height: frame.height)
+        let borderBody = SKPhysicsBody(edgeLoopFrom: bounds)
+        self.physicsBody = borderBody
+        
         self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -4.0)
         
         addChild(brick)
@@ -80,11 +87,17 @@ class GameScene: SKScene{
         for touch in touches {
             let location = touch.location(in: self)
             
+//            if brick.contains(location){
+//                jump()
+//            }
+            
             let move = SKAction.move(to: location, duration: 0.1)
             brick.run(move)
-            
-            
         }
+    }
+    
+    func jump(){
+        brick.physicsBody?.applyImpulse(CGVector(dx: Int.random(in: -20...20), dy: 20))
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -93,7 +106,10 @@ class GameScene: SKScene{
                         
             if brick.contains(location){
                 clickCount += 1
+                //update count
                 countLabel.text = "Count: \(clickCount)"
+                
+                
             }
             
             brick.physicsBody = SKPhysicsBody(rectangleOf: brick.size)
