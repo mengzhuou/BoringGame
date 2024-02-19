@@ -9,13 +9,14 @@ import SpriteKit
 
 class GameScene: SKScene{
     let brick = SKSpriteNode()
+    var clickCount = 0
+    var countLabel = SKLabelNode()
     
     override func didMove(to view: SKView) {
         brick.size = CGSize(width: 100, height: 50)
         
-        let brickSize = CGSize(width: 100, height: 50)
-        brick.position = CGPoint(x: 200, y: 100)
-        
+        let brickSize = brick.size
+        brick.position = CGPoint(x: 200, y: 50)
         
         //body rectangle
         let bodyRect = CGRect(origin: CGPoint(x: -brickSize.width/2, y: -brickSize.height/2), size: brickSize)
@@ -42,6 +43,16 @@ class GameScene: SKScene{
         brickText.position = CGPoint(x: 0, y: -7)
         
         brick.addChild(brickText)
+        
+        //count label
+        countLabel = SKLabelNode(text: "Count: \(clickCount)")
+        countLabel.fontColor = .black
+        countLabel.fontSize = 25
+        countLabel.fontName = "Arial-BoldMT"
+        countLabel.horizontalAlignmentMode = .right
+        countLabel.verticalAlignmentMode = .top
+        countLabel.position = CGPoint(x: size.width - 50, y: size.height - 80)
+        addChild(countLabel)
         
         self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -4.0)
         
@@ -78,6 +89,13 @@ class GameScene: SKScene{
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
+            let location = touch.location(in: self)
+                        
+            if brick.contains(location){
+                clickCount += 1
+                countLabel.text = "Count: \(clickCount)"
+            }
+            
             brick.physicsBody = SKPhysicsBody(rectangleOf: brick.size)
             brick.physicsBody?.isDynamic = true
             brick.physicsBody?.affectedByGravity = true
