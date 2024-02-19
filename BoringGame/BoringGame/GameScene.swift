@@ -12,12 +12,19 @@ class GameScene: SKScene{
     var clickCount = 0
     var bounds: CGRect = CGRect.zero
     var countLabel = SKLabelNode()
+    var startTouch = CGPoint()
+    var endTouch = CGPoint()
     
     override func didMove(to view: SKView) {
         brick.size = CGSize(width: 100, height: 50)
         
         let brickSize = brick.size
         brick.position = CGPoint(x: 200, y: 50)
+        
+        self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -4.0)
+        brick.physicsBody = SKPhysicsBody(rectangleOf: brick.size)
+        brick.physicsBody?.isDynamic = true
+        brick.physicsBody?.affectedByGravity = true
         
         //body rectangle
         let bodyRect = CGRect(origin: CGPoint(x: -brickSize.width/2, y: -brickSize.height/2), size: brickSize)
@@ -61,8 +68,6 @@ class GameScene: SKScene{
         let borderBody = SKPhysicsBody(edgeLoopFrom: bounds)
         self.physicsBody = borderBody
         
-        self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -4.0)
-        
         addChild(brick)
         createGround()
     }
@@ -83,41 +88,31 @@ class GameScene: SKScene{
         
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touch.location(in: self)
-            
-//            if brick.contains(location){
-//                jump()
-//            }
-            
-            let move = SKAction.move(to: location, duration: 0.1)
-            brick.run(move)
+            if brick.contains(location) {
+                startTouch = location
+                clickCount += 1
+                countLabel.text = "Count: \(clickCount)"
+                let impulseX = startTouch.x
+                let impulseY = startTouch.y
+                
+                let randomDX = CGFloat(Int.random(in: -500...0))
+                let randomDY = CGFloat(Int.random(in: 15...50))
+                
+                brick.physicsBody?.applyImpulse(CGVector(dx: impulseX + randomDX, dy: impulseY + randomDY))
+            }
         }
+        
     }
     
-    func jump(){
-        brick.physicsBody?.applyImpulse(CGVector(dx: Int.random(in: -20...20), dy: 20))
-    }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
-            let location = touch.location(in: self)
-                        
-            if brick.contains(location){
-                clickCount += 1
-                //update count
-                countLabel.text = "Count: \(clickCount)"
-                
-                
-            }
-            
-            brick.physicsBody = SKPhysicsBody(rectangleOf: brick.size)
-            brick.physicsBody?.isDynamic = true
-            brick.physicsBody?.affectedByGravity = true
-            
-            
+            endTouch = touch.location(in: self)
         }
+        
     }
 }
 
